@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using PixelArt.Data;
+
 namespace PixelArt
 {
     public class Program
@@ -8,6 +11,9 @@ namespace PixelArt
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<AppDbContext>(options =>
+            options.UseSqlServer(builder.Configuration.GetConnectionString("ColorPanels")));
 
             var app = builder.Build();
 
