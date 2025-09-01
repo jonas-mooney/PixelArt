@@ -2,11 +2,13 @@
   display: flex;
   flex-direction: row;
   height: 100vh;
+  width: 100vw;
+  background-color: #f0f0f0;
 }
 
 .sideNav {
   width: 100px;
-  background-color: #f0f0f0;
+  background-color: #ffffff;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
   height: 400px;
@@ -17,4 +19,40 @@
   justify-content: space-around;
   border-radius: 8px;
   margin-left: 20px;
+  position: fixed;
+}
+
+.logo {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-60%);
+  width: 350px;
+}
+
+.outlet-wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+.main-components {
+  padding: 20px;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.editor {
+  background-color: blanchedalmond;
+}
+
+.settings {
+  background-color: cadetblue;
+}
+
+.collection {
+  background-color: cornflowerblue;
 }

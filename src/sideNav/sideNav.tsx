@@ -5,10 +5,7 @@ function sideNav() {
         <div className="sideNav">
             <Link to="/">Home</Link>
             <Link to="/collection">Collection</Link>
-            <Link to="/settings">Settings</Link>    
-            <span>nav item</span>
-            <span>nav item</span>
-            <span>nav item</span>
+            <Link to="/settings">Settings</Link>
         </div>
     )
 }

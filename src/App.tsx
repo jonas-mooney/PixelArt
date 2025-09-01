@@ -6,7 +6,10 @@ function App() {
   return (
     <div className="app">
       <SideNav />
-      <Outlet />
+      <img src="src\assets\Pixel-Art-cartoon-cloud.png" className="logo" alt="logo" />
+      <div className='outlet-wrapper'>
+        <Outlet />
+      </div>
     </div>
   )
 }
