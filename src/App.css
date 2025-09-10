@@ -10,7 +10,7 @@
   width: 100px;
   background-color: #ffffff;
   padding: 20px;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   height: 400px;
   align-self: center;
   display: flex;
@@ -47,6 +47,17 @@
 
 .editor {
   background-color: blanchedalmond;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  width: 2000px;
+  height: 2000px;
+}
+
+.cube {
+  margin: 0;
+  height: 20px;
+  width: 20px;
 }
 
 .settings {
