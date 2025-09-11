@@ -68,10 +68,12 @@
 .editor {
   background-color: blanchedalmond;
   display: grid;
-  grid-template-columns: repeat(100, 20px);
-  grid-template-rows: repeat(100, 20px);
-  width: 2000px;
-  height: 2000px;
+  grid-template-columns: repeat(100, 30px);
+  grid-template-rows: repeat(100, 30px);
+  /* width: 2000px; */
+  /* height: 2000px; */
+  width: 200vw;
+  height: 200vh;
   padding: 0;
   gap: 0; /* No gaps! */
 }
@@ -85,8 +87,8 @@
 .cube {
   margin: 0;
   padding: 0;
-  width: 20px;
-  height: 20px;
+  /* width: 30px; */
+  /* height: 30px; */
   box-sizing: border-box; /* Ensures borders/padding don’t add size */
 }
 

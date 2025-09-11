@@ -1,22 +1,25 @@
 import {
   TransformWrapper,
   TransformComponent,
-  useControls,
+//   useControls,
 } from "react-zoom-pan-pinch";
 
-const Controls = () => {
-  const { zoomIn, zoomOut, resetTransform } = useControls();
+import { useWindowSize } from "@uidotdev/usehooks";
 
-  return (
-    <div className="tools">
-      <button onClick={() => zoomIn()}>+</button>
-      <button onClick={() => zoomOut()}>-</button>
-      <button onClick={() => resetTransform()}>x</button>
-    </div>
-  );
-};
+// const Controls = () => {
+//   const { zoomIn, zoomOut, resetTransform } = useControls();
+
+//   return (
+//     <div className="tools">
+//       <button onClick={() => zoomIn()}>+</button>
+//       <button onClick={() => zoomOut()}>-</button>
+//       <button onClick={() => resetTransform()}>x</button>
+//     </div>
+//   );
+// };
 
 function Editor() {
+  const size = useWindowSize();
   let cubeArray = [];
 
   const randomHexColor = () =>
@@ -35,23 +38,24 @@ function Editor() {
       limitToBounds={true}
       alignmentAnimation={{ sizeX: 0, sizeY: 0 }}
       centerZoomedOut={true}
-      minScale={0.5}
-      maxScale={4}
+      minScale={1}
+      maxScale={3}
       initialScale={1}
       initialPositionX={0}
       initialPositionY={0}
+      panning={{ disabled: false, velocityDisabled: false }}
     >
       {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
         <>
-          <Controls />
+          {/* <Controls /> */}
           <TransformComponent>
             <div className="editor">
               {cubeArray.map((cube, index) => (
-                <div
+                <span
                   key={index}
                   className="cube"
                   style={{ backgroundColor: cube.color }}
-                ></div>
+                ></span>
               ))}
             </div>
           </TransformComponent>
